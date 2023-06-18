@@ -1,0 +1,33 @@
+{
+  "name": "komoot-tool",
+  "version": "0.1.0",
+  "displayName": "komoot Tools",
+  "author": "dexy92 <101744964+dexy92@users.noreply.github.com>",
+  "description": "A browser extension for additional komoot tools",
+  "scripts": {
+    "build": "vite build",
+    "watch": "vite build --watch --mode development --minify false",
+    "dev": "vite",
+    "serve:firefox": "web-ext run --start-url \"about:debugging#/runtime/this-firefox\"  --source-dir ./dist/",
+    "serve:chrome": "web-ext run -t chromium --start-url \"https://komoot.com\" --source-dir ./dist/"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.22.5",
+    "@babel/plugin-transform-react-jsx": "^7.22.5",
+    "@babel/plugin-transform-react-jsx-development": "^7.22.5",
+    "@preact/preset-vite": "^2.5.0",
+    "@samrum/vite-plugin-web-extension": "^5.0.0",
+    "@types/chrome": "^0.0.228",
+    "@types/webextension-polyfill": "^0.10.0",
+    "babel-plugin-transform-hook-names": "^1.0.2",
+    "typescript": "^5.0.4",
+    "vite": "~4.3.3",
+    "web-ext": "^7.6.2"
+  },
+  "dependencies": {
+    "preact": "^10.15.1",
+    "webextension-polyfill": "^0.10.0"
+  },
+  "packageManager": "yarn@3.6.0"
+}
